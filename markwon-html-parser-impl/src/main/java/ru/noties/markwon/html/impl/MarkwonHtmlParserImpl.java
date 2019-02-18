@@ -362,6 +362,10 @@ public class MarkwonHtmlParserImpl extends MarkwonHtmlParser {
             if (TAG_PARAGRAPH.equals(name)) {
                 appendQuietly(output, '\n');
             }
+            
+            if (TAG_LIST_ITEM.equals(name)) {
+                appendQuietly(output, '\n');
+            }
 
             this.currentBlock = block.parent;
         }
